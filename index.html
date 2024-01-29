@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+    <style>
+        body{
+            display: flex;
+            height: 100vh;
+
+        }
+        .container{
+            border: 5px solid;
+            width: 500px;
+            margin: auto;
+            text-align: center;
+            border-radius: 30px;
+            background-color: beige;
+        }
+        .container p{
+            font-size: 7rem;
+        }
+        .container button{
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            background-color: black;
+            color: white;
+            border-radius: 50px;
+            margin: 20px;
+            cursor: pointer;
+        }
+
+        .container h2{
+            font-family: monospace;
+            font-size: 3rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Counter App</h2>
+        <p id="result">0</p>
+        <button id="minus">Minus -</button>
+        <button id="reset">reset</button>
+        <button id="add">Add + </button>
+        
+
+    </div>
+    <script>
+        //create a counter function 
+
+        const add = document.getElementById('add');
+        const minus = document.getElementById('minus');
+        let result = document.getElementById('result');
+        const reset = document.getElementById('reset');
+        let temp = 0;
+
+
+        add.addEventListener('click' , function(){
+            temp++;
+            result.textContent = temp;
+        });
+
+        minus.addEventListener('click' , function(){
+            temp--;
+            result.textContent = temp;
+        });
+
+        reset.addEventListener('click',function(){
+            temp = 0;
+            result.textContent = temp;
+        })
+        
+    </script>
+</body>
+</html>
